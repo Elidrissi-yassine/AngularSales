@@ -1,0 +1,117 @@
+/* General navbar styles */
+.navbar {
+    background-color: #ffede7; /* Light peach color */
+    border-bottom: 1px solid #e3e3e3; /* Light border under navbar */
+  }
+  
+  /* Navbar brand */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333; /* Dark text color */
+    text-transform: uppercase;
+  }
+  
+  /* Navbar toggler button */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .navbar-toggler .fas.fa-bars {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Navbar items */
+  .navbar-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: #333; /* Dark text color */
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #f7c4b3; /* Light peach hover effect */
+    color: #333;
+  }
+  
+  /* Active state for nav items */
+  .nav-item.active .nav-link {
+    font-weight: bold;
+    color: #d14b4b; /* Color for active link */
+  }
+  
+  .nav-item.active .nav-link:hover {
+    background-color: #f7c4b3;
+  }
+  
+  /* Social icons */
+  .navbar-nav .nav-item i {
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-item i:hover {
+    color: #d14b4b; /* Change to red on hover */
+  }
+  
+  /* Fixed top navbar */
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar collapse styles for smaller screens */
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+      padding: 12px 20px;
+    }
+  }
+
+
+  .nav-link:hover{
+    background-color: rgb(18, 18, 72);
+    color: white;
+    font-weight: bold;
+
+    border-radius: 15px;
+  }
+  .logo_app{
+    color: rgb(30, 30, 142);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  

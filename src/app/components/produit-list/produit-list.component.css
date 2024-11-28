@@ -1,0 +1,108 @@
+/* Container Styles */
+.client-list-card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.client-list-card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.client-list-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.client-list-card a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Table Styles */
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.client-table thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.client-table th, 
+.client-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.client-table th {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.client-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.client-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Action Buttons */
+.client-table a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.client-table a:hover {
+    text-decoration: underline;
+}
+
+.client-table button {
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.client-table button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .client-list-card {
+        padding: 15px;
+    }
+
+    .client-table th, 
+    .client-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

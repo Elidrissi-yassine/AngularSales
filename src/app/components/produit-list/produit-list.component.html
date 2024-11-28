@@ -1,0 +1,31 @@
+<div class="client-list-card">
+    <h2>Liste des Produits </h2>
+    <a routerLink="/add-produits">Ajouter Produit</a>
+    
+    <table class="client-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Marque</th>
+          <th>Prix</th>
+          <th>QteStock</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of produits">
+          <td>{{ produit.id }}</td>
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.marque }}</td>
+          <td>{{ produit.prix }}</td>
+          <td>{{ produit.qteStock }}</td>
+          <td>
+            <a [routerLink]="['/edit-produit', produit.id]">Modifier</a>
+            <button (click)="deleteClient(produit.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,58 @@
+<div class="client-list-card">
+    <h2>Liste des Ventes</h2>
+    <a routerLink="/add-vente">Ajouter Vente</a>
+    
+    <table class="client-table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Client</th>
+          <th>Produit</th>
+          <th>Quantite</th>
+          <th>Actions</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vente of ventes">
+          <td>{{ vente.id }}</td>
+          <td>{{ vente.clientname }}</td>
+          <td>{{ vente.produitname }}</td>
+          <td>{{ vente.quantite }}</td>
+          <td>
+            <a [routerLink]="['/edit-vente', vente.id]">Modifier</a>
+            <button (click)="deleteVente(vente.id)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <form (ngSubmit)="genererfacture()">
+      <div>
+        <label for="client">Client:</label>
+        <select
+          id="client"
+          [(ngModel)]="selectedClientId"
+          name="selectedClientId"
+          required
+        >
+          <option [value]="null">Tous les clients</option>
+          <option *ngFor="let client of clients" [value]="client.id">
+            {{ client.nom }}
+          </option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="date">Date:</label>
+        <input
+          id="date"
+          type="date"
+          [(ngModel)]="selectedDate"
+          name="selectedDate"
+        />
+      </div>
+      <button type="submit" class="btn btn-success">
+       Generer Facture
+      </button>
+    </form>
+</div>
